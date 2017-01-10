@@ -5,7 +5,7 @@ $(function() {
     if (cep != "") {
       $.get("https://viacep.com.br/ws/"+cep+"/json/unicode/",function(resultado) {
         $('.fa.fa-spinner.load').fadeOut().hide();
-        console.log(cep);
+        console.log(resultado);
       });
     } else {
       $('.resultado').empty().append('CEP Inválido');
