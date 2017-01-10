@@ -6,6 +6,7 @@ $(function() {
       $.get("https://viacep.com.br/ws/"+cep+"/json/unicode/",function(resultado) {
         $('.fa.fa-spinner.load').fadeOut().hide();
         console.log(resultado);
+        $('.resultado').empty().append("Rua "+resultado.logradouro+"<br>"+"Bairro "+resultado.bairro+"<br>"+resultado.cidade+" - "+resultado.uf);
       });
     } else {
       $('.resultado').empty().append('CEP Inválido');
