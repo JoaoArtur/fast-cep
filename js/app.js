@@ -1,6 +1,6 @@
 $(function() {
   $('.formulario').submit(function() {
-    var cep = $('input[name="cep"]').val();{
+    var cep = $('input[name="cep"]').val();
     $('.resultado').empty().append('<span class="fa fa-spinner load"></span>');
     if (!empty(cep)) {
       $.get("https://viacep.com.br/ws/"+cep+"/json/unicode/",function(resultado) {
